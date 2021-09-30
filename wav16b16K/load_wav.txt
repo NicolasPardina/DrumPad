@@ -1,0 +1,39 @@
+#-------------------------------------------------------------------
+#
+#  Fichero:
+#    load_wav.txt  19/6/2019
+#
+#    (c) J.M. Mendias
+#    Programación de Sistemas y Dispositivos
+#    Facultad de Informática. Universidad Complutense de Madrid
+#
+#  Propósito:
+#    Script del GDB que carga archivos WAV en la memoria de la placa 
+#    de prototipado S3CEV40 para su reproducción por el audio-codec  
+#
+#  Notas de diseño:
+#    - Los ficheros WAV y este script deben estar ubicados en el mismo 
+#      directorio
+#    - Previo a su ejecución desde una consola del GDB, debe cambiarse 
+#      al mencionado directorio con el comando: cd <ruta>
+#    - Para ejecutarlo debe usarse el comando: source load_wav.txt
+#
+#-------------------------------------------------------------------
+
+echo Cargando ficheros WAV...\n
+
+restore key0.wav      binary 0x0c400000
+restore key1.wav      binary 0x0c420000
+restore key2.wav      binary 0x0c440000
+restore key4.wav      binary 0x0c460000
+restore key5.wav      binary 0x0c480000
+restore key6.wav      binary 0x0c4a0000
+restore key8.wav      binary 0x0c4c0000
+restore key9.wav      binary 0x0c4e0000
+restore keya.wav      binary 0x0c500000
+restore keyc.wav      binary 0x0c520000
+restore keyd.wav      binary 0x0c540000
+restore keye.wav      binary 0x0c560000
+restore keyf.wav      binary 0x0c580000
+
+echo ...carga finalizada

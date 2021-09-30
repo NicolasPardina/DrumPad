@@ -1,0 +1,28 @@
+ENTRY( main )
+SECTIONS
+{
+  . = 0x0c100000;
+  
+  _image_start = .;
+  	_code_start = .;
+      .text   : { * (.text) }
+   	_code_end = .; 
+    
+    _data_start = .;
+      .rodata : { *(.rodata) }
+      .data   : { *(.data) } 
+      .bss    : { *(.bss) }
+    _data_end = .;   	 	    	
+  _image_end = .;
+    
+  . = 0x10000000;
+
+    .sptext  : { * (.sptext) }
+    .spdata  : { * (.spdata) }
+  
+  _data_size = SIZEOF(.rodata) + SIZEOF(.data) + SIZEOF(.bss) + SIZEOF(.spdata);
+  _code_size = SIZEOF (.text) + SIZEOF(.sptext);
+  _total_size = _code_size + _data_size;
+    	     	   
+  end = .;
+}
