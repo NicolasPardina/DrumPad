@@ -25,4 +25,4 @@ Trackbank.c
 Contiene un sistema de ficheros basado en listas enlazadas. Los bloques libres están enlazados y se usan y sueltan por los ficheros. Tamaño de word 4 bytes, tamaño de bloque 4 kilobytes, tamaño máximo de fichero 4 megabytes. Funciones open, close, write, read. Read  mantiene el puntero donde lo dejó antes de cerrarse.  Hasta 30 segundos de grabación wav, y numerosos minutos de grabación de mezcla (en vez de guardar el sonido, se guarda cuando se pulsa cada tecla.
 
 
-
+En este video se muestra gran parte de la funcionalidad del programa: https://www.youtube.com/watch?v=GNVDH_dfhbw&t=19s
